@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">dailynote</string>
+    <string name="test">测试</string>
+    <string name="tips_for_note">日常生活记录</string>
+    <string name="tips_for_history">以往记录</string>
+    <string name="tips_for_report">生成报告</string>
+</resources>

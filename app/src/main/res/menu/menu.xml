@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/recent_item"
+        android:id="@+id/note"
         android:icon="@drawable/ic_note_black_36dp"
         android:title="Note" />
     <item
-        android:id="@+id/location_item"
+        android:id="@+id/history"
         android:icon="@drawable/ic_history_black_36dp"
         android:title="history" />
     <item
-        android:id="@+id/favorite_item"
+        android:id="@+id/report"
         android:icon="@drawable/ic_assessment_black_36dp"
         android:title="Report" />
 </menu>
