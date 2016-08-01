@@ -58,6 +58,7 @@ public class FragmentHomeNote extends BaseFragment implements FragmentNotePresen
     public void setViewPagerAdapter(FragmentPagerAdapter fragmentPagerAdapter) {
         if (mViewPager != null) {
             mViewPager.setAdapter(fragmentPagerAdapter);
+            mViewPager.setCurrentItem(1);
         }
     }
 

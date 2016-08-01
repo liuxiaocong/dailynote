@@ -29,6 +29,6 @@ public class DNTextView extends TextView {
         super.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/digigraphics.ttf"));
     }
     private  void setDefault(){
-        setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/digigraphics.ttf"));
+        //setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/appfont.ttf"));
     }
 }

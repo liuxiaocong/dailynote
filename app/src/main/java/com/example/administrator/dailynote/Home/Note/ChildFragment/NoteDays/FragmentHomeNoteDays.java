@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.example.administrator.dailynote.Base.BaseFragment;
 import com.example.administrator.dailynote.R;
@@ -26,6 +27,8 @@ public class FragmentHomeNoteDays extends BaseFragment implements NoteDaysPresen
     RecyclerView mRecyclerView;
     String TAG = "FragmentHomeNoteDays";
     NoteDaysPresenter mNoteDaysPresenter;
+    @BindView(R.id.loading)
+    ProgressBar mLoading;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,7 @@ public class FragmentHomeNoteDays extends BaseFragment implements NoteDaysPresen
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setNestedScrollingEnabled(true);
         mNoteDaysPresenter.onUIReady();
 
     }
@@ -77,7 +81,7 @@ public class FragmentHomeNoteDays extends BaseFragment implements NoteDaysPresen
 
     private void setTodayStyle() {
 
-        mRoot.setBackgroundColor(Color.parseColor("#ee5500"));
+        mRoot.setBackgroundColor(Color.parseColor("#ffffff"));
     }
 
     private void setTomorrowStyle() {
@@ -93,6 +97,21 @@ public class FragmentHomeNoteDays extends BaseFragment implements NoteDaysPresen
     @Override
     public void setAdapter(RecyclerView.Adapter adapter) {
         mRecyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void showLoading() {
+        mLoading.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLoading() {
+        mLoading.setVisibility(View.GONE);
+    }
+
+    @Override
+    public View getRoot() {
+        return mRoot;
     }
 
     @Override
